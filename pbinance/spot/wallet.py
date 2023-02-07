@@ -1,4 +1,4 @@
-from finance_utils.component.local import to_local
+from paux.param import to_local
 from pbinance.client import Client
 from typing import Union
 

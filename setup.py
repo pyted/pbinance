@@ -10,10 +10,11 @@ URL = "https://github.com/pyted/pbinance"
 EMAIL = 'pyted@outlook.com'
 AUTHOR = 'pyted'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '1.0.4'
+VERSION = '1.0.5'
 
 REQUIRED = [
     'requests',
+    'paux',
 ]
 
 EXTRAS = {}
