@@ -29,4 +29,4 @@ class Binance():
         self.other = Other(key=key, secret=secret)
 
 
-__version__ = '1.0.5'
+__version__ = '1.0.6'

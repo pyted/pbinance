@@ -39,7 +39,7 @@ class Wallet(Client):
         '''
         https://binance-docs.github.io/apidocs/spot/cn/#system
         '''
-        return self.send_request(*self.endpoints.get_system_status, to_local(locals()))
+        return self.send_request(*self.endpoints.get_system_status, **to_local(locals()))
 
     # 获取所有币信息 (USER_DATA)
     def get_capital_config_getall(self, recvWindow: int = ''):
@@ -49,7 +49,7 @@ class Wallet(Client):
         Name      	Type	Mandatory	Description
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_capital_config_getall, to_local(locals()))
+        return self.send_request(*self.endpoints.get_capital_config_getall, **to_local(locals()))
 
     # 查询每日资产快照 (USER_DATA)
     def get_accountSnapshot(self, type: str = '', startTime: int = '', endTime: int = '', limit: int = '',
@@ -64,7 +64,7 @@ class Wallet(Client):
         limit     	int 	NO       	min 7, max 30, default 7
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_accountSnapshot, to_local(locals()))
+        return self.send_request(*self.endpoints.get_accountSnapshot, **to_local(locals()))
 
     # 关闭站内划转 (USER_DATA)
     def set_account_disableFastWithdrawSwitch(self, recvWindow: int = ''):
@@ -74,7 +74,7 @@ class Wallet(Client):
         Name      	Type	Mandatory	Description
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.set_account_disableFastWithdrawSwitch, to_local(locals()))
+        return self.send_request(*self.endpoints.set_account_disableFastWithdrawSwitch, **to_local(locals()))
 
     # 开启站内划转 (USER_DATA)
     def set_account_enableFastWithdrawSwitch(self, recvWindow: int = ''):
@@ -84,7 +84,7 @@ class Wallet(Client):
         Name      	Type	Mandatory	Description
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.set_account_enableFastWithdrawSwitch, to_local(locals()))
+        return self.send_request(*self.endpoints.set_account_enableFastWithdrawSwitch, **to_local(locals()))
 
     # 提币 (USER_DATA)
     def set_capital_withdraw_apply(self, coin: str = '', withdrawOrderId: str = '', network: str = '',
@@ -106,7 +106,7 @@ class Wallet(Client):
         walletType        	int             	NO       	表示出金使用的钱包，0为现货钱包，1为资金钱包。默认walletType为"充币账户"是您设置在钱包->现货账户或资金账户->充值。
         recvWindow        	int             	NO
         '''
-        return self.send_request(*self.endpoints.set_capital_withdraw_apply, to_local(locals()))
+        return self.send_request(*self.endpoints.set_capital_withdraw_apply, **to_local(locals()))
 
     # 获取充值历史(支持多网络) (USER_DATA)
     def get_capital_deposit_hisrec(self, coin: str = '', status: int = '', startTime: int = '', endTime: int = '',
@@ -124,7 +124,7 @@ class Wallet(Client):
         recvWindow	int 	NO
         txId      	str 	NO
         '''
-        return self.send_request(*self.endpoints.get_capital_deposit_hisrec, to_local(locals()))
+        return self.send_request(*self.endpoints.get_capital_deposit_hisrec, **to_local(locals()))
 
     # 获取提币历史 (支持多网络)  (USER_DATA)
     def get_capital_withdraw_history(self, coin: str = '', withdrawOrderId: str = '', status: int = '',
@@ -143,7 +143,7 @@ class Wallet(Client):
         endTime        	int 	NO       	默认当前时间戳
         recvWindow     	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_capital_withdraw_history, to_local(locals()))
+        return self.send_request(*self.endpoints.get_capital_withdraw_history, **to_local(locals()))
 
     # 获取充值地址 (支持多网络) (USER_DATA)
     def get_capital_deposit_address(self, coin: str = '', network: str = '', recvWindow: int = ''):
@@ -155,7 +155,7 @@ class Wallet(Client):
         network   	str 	NO
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_capital_deposit_address, to_local(locals()))
+        return self.send_request(*self.endpoints.get_capital_deposit_address, **to_local(locals()))
 
     # 账户状态 (USER_DATA)
     def get_account_status(self, recvWindow: int = ''):
@@ -165,7 +165,7 @@ class Wallet(Client):
         Name      	Type	Mandatory	Description
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_account_status, to_local(locals()))
+        return self.send_request(*self.endpoints.get_account_status, **to_local(locals()))
 
     # 账户API交易状态(USER_DATA)
     def get_account_apiTradingStatus(self, recvWindow: int = ''):
@@ -175,7 +175,7 @@ class Wallet(Client):
         Name      	Type	Mandatory	Description
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_account_apiTradingStatus, to_local(locals()))
+        return self.send_request(*self.endpoints.get_account_apiTradingStatus, **to_local(locals()))
 
     # 小额资产转换BNB历史 (USER_DATA)
     def get_asset_dribblet(self, startTime: int = '', endTime: int = '', recvWindow: int = ''):
@@ -187,7 +187,7 @@ class Wallet(Client):
         endTime   	int 	NO
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_asset_dribblet, to_local(locals()))
+        return self.send_request(*self.endpoints.get_asset_dribblet, **to_local(locals()))
 
     # 获取可以转换成BNB的小额资产 (USER_DATA)
     def set_asset_dust_btc(self, recvWindow: int = ''):
@@ -197,7 +197,7 @@ class Wallet(Client):
         Name      	Type	Mandatory	Description
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.set_asset_dust_btc, to_local(locals()))
+        return self.send_request(*self.endpoints.set_asset_dust_btc, **to_local(locals()))
 
     # 小额资产转换 (USER_DATA)
     def set_asset_dust(self, asset: str = '', recvWindow: int = ''):
@@ -208,7 +208,7 @@ class Wallet(Client):
         asset     	str 	YES      	正在转换的资产。 例如：asset = BTC＆asset = USDT
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.set_asset_dust, to_local(locals()))
+        return self.send_request(*self.endpoints.set_asset_dust, **to_local(locals()))
 
     # 资产利息记录 (USER_DATA)
     def get_asset_assetDividend(self, asset: str = '', startTime: int = '', endTime: int = '', limit: int = '',
@@ -223,7 +223,7 @@ class Wallet(Client):
         limit     	int 	NO       	Default 20, max 500
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_asset_assetDividend, to_local(locals()))
+        return self.send_request(*self.endpoints.get_asset_assetDividend, **to_local(locals()))
 
     # 上架资产详情 (USER_DATA)
     def get_asset_assetDetail(self, asset: str = '', recvWindow: int = ''):
@@ -234,7 +234,7 @@ class Wallet(Client):
         asset     	str 	NO
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_asset_assetDetail, to_local(locals()))
+        return self.send_request(*self.endpoints.get_asset_assetDetail, **to_local(locals()))
 
     # 交易手续费率查询 (USER_DATA)
     def get_asset_tradeFee(self, symbol: str = '', recvWindow: int = ''):
@@ -245,7 +245,7 @@ class Wallet(Client):
         symbol    	str 	NO
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_asset_tradeFee, to_local(locals()))
+        return self.send_request(*self.endpoints.get_asset_tradeFee, **to_local(locals()))
 
     # 用户万向划转 (USER_DATA)
     def set_set_asset_transfer(self, type: str = '', asset: str = '', amount: Union[float, int] = '',
@@ -261,7 +261,7 @@ class Wallet(Client):
         toSymbol  	str             	NO
         recvWindow	int             	NO
         '''
-        return self.send_request(*self.endpoints.set_set_asset_transfer, to_local(locals()))
+        return self.send_request(*self.endpoints.set_set_asset_transfer, **to_local(locals()))
 
     # 查询用户万向划转历史 (USER_DATA)
     def get_get_asset_transfer(self, type: str = '', startTime: int = '', endTime: int = '', current: int = '',
@@ -279,7 +279,7 @@ class Wallet(Client):
         toSymbol  	str 	NO
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_get_asset_transfer, to_local(locals()))
+        return self.send_request(*self.endpoints.get_get_asset_transfer, **to_local(locals()))
 
     # 资金账户 (USER_DATA)
     def set_asset_get_funding_asset(self, asset: str = '', needBtcValuation: str = '', recvWindow: int = ''):
@@ -291,7 +291,7 @@ class Wallet(Client):
         needBtcValuation	str 	NO       	true or false
         recvWindow      	int 	NO
         '''
-        return self.send_request(*self.endpoints.set_asset_get_funding_asset, to_local(locals()))
+        return self.send_request(*self.endpoints.set_asset_get_funding_asset, **to_local(locals()))
 
     # 用户持仓 (USER_DATA)
     def set_asset_getUserAsset(self, asset: str = '', needBtcValuation: bool = '', recvWindow: int = ''):
@@ -303,7 +303,7 @@ class Wallet(Client):
         needBtcValuation	bool	NO       	是否需要返回兑换成BTC的估值
         recvWindow      	int 	NO
         '''
-        return self.send_request(*self.endpoints.set_asset_getUserAsset, to_local(locals()))
+        return self.send_request(*self.endpoints.set_asset_getUserAsset, **to_local(locals()))
 
     # 稳定币自动兑换划转 (TRADE)
     def set_asset_convert_transfer(self, clientTranId: str = '', asset: str = '', amount: Union[float, int] = '',
@@ -318,7 +318,7 @@ class Wallet(Client):
         targetAsset 	str             	YES      	目标资产
         accountType 	str             	NO       	仅支持MAIN和CARD，如果为空，默认查询主账户MAIN
         '''
-        return self.send_request(*self.endpoints.set_asset_convert_transfer, to_local(locals()))
+        return self.send_request(*self.endpoints.set_asset_convert_transfer, **to_local(locals()))
 
     # 稳定币自动兑换划转查询 (USER_DATA)
     def get_asset_convert_transfer_queryByPage(self, tranId: int = '', clientTranId: str = '', asset: str = '',
@@ -337,7 +337,7 @@ class Wallet(Client):
         current     	int 	NO       	当前页面，默认1，最小值为1
         size        	int 	NO       	页面大小，默认10，最大值为100
         '''
-        return self.send_request(*self.endpoints.get_asset_convert_transfer_queryByPage, to_local(locals()))
+        return self.send_request(*self.endpoints.get_asset_convert_transfer_queryByPage, **to_local(locals()))
 
     # 云算力历史记录分页查询 (USER_DATA)
     def get_asset_ledger_transfer_cloud_mining_queryByPage(self, tranId: int = '', clientTranId: str = '',
@@ -355,7 +355,7 @@ class Wallet(Client):
         current     	int 	NO       	当前页面，默认1，最小值为1
         size        	int 	NO       	页面大小，默认10，最大值为100
         '''
-        return self.send_request(*self.endpoints.get_asset_ledger_transfer_cloud_mining_queryByPage, to_local(locals()))
+        return self.send_request(*self.endpoints.get_asset_ledger_transfer_cloud_mining_queryByPage, **to_local(locals()))
 
     # 查询用户API Key权限 (USER_DATA)
     def get_account_apiRestrictions(self, recvWindow: int = ''):
@@ -365,4 +365,4 @@ class Wallet(Client):
         Name      	Type	Mandatory	Description
         recvWindow	int 	NO
         '''
-        return self.send_request(*self.endpoints.get_account_apiRestrictions, to_local(locals()))
+        return self.send_request(*self.endpoints.get_account_apiRestrictions, **to_local(locals()))
