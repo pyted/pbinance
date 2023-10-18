@@ -5,12 +5,12 @@ from typing import Union
 
 # 币安码
 class _GiftCardEndpoints():
-    set_createCode = ['https://api.binance.com/','POST', '/sapi/v1/giftcard/createCode', True]  # 创建币安码 (USER_DATA)
-    set_redeemCode = ['https://api.binance.com/','POST', '/sapi/v1/giftcard/redeemCode', True]  # 兑现币安码 (USER_DATA)
-    get_verify = ['https://api.binance.com/','GET', '/sapi/v1/giftcard/verify', True]  # 验证币安码 (USER_DATA)
-    get_cryptography_rsa_public_key = ['https://api.binance.com/','GET', '/sapi/v1/giftcard/cryptography/rsa-public-key', True]  # 获取RSA Public Key (USER_DATA)
-    set_buyCode = ['https://api.binance.com/','POST', '/sapi/v1/giftcard/buyCode', True]  # 购买币安码 (TRADE)
-    get_buyCode_token_limit = ['https://api.binance.com/','GET', '/sapi/v1/giftcard/buyCode/token-limit', True]  # 获取货币使用限制 (USER_DATA)
+    set_createCode = ['https://api.binance.com','POST', '/sapi/v1/giftcard/createCode', True]  # 创建币安码 (USER_DATA)
+    set_redeemCode = ['https://api.binance.com','POST', '/sapi/v1/giftcard/redeemCode', True]  # 兑现币安码 (USER_DATA)
+    get_verify = ['https://api.binance.com','GET', '/sapi/v1/giftcard/verify', True]  # 验证币安码 (USER_DATA)
+    get_cryptography_rsa_public_key = ['https://api.binance.com','GET', '/sapi/v1/giftcard/cryptography/rsa-public-key', True]  # 获取RSA Public Key (USER_DATA)
+    set_buyCode = ['https://api.binance.com','POST', '/sapi/v1/giftcard/buyCode', True]  # 购买币安码 (TRADE)
+    get_buyCode_token_limit = ['https://api.binance.com','GET', '/sapi/v1/giftcard/buyCode/token-limit', True]  # 获取货币使用限制 (USER_DATA)
 
 
 class GiftCard(Client):

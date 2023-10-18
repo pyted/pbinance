@@ -5,12 +5,12 @@ from typing import Union
 
 # 闪兑
 class _ConvertEndpoints():
-    get_exchangeInfo = ['https://api.binance.com/','GET', '/sapi/v1/convert/exchangeInfo', False]  # 查询可交易币对信息 (USER_DATA)
-    get_assetInfo = ['https://api.binance.com/','GET', '/sapi/v1/convert/assetInfo', False]  # 查询可交易币种精度 (USER_DATA)
-    set_getQuote = ['https://api.binance.com/','POST', '/sapi/v1/convert/getQuote', False]  # 发送获取报价请求 (USER_DATA)
-    set_acceptQuote = ['https://api.binance.com/','POST', '/sapi/v1/convert/acceptQuote', False]  # 接受报价 (TRADE)
-    get_orderStatus = ['https://api.binance.com/','GET', '/sapi/v1/convert/orderStatus', False]  # 查询订单状态 (USER_DATA)
-    get_tradeFlow = ['https://api.binance.com/','GET', '/sapi/v1/convert/tradeFlow', True]  # 获取闪兑交易记录 (USER_DATA)
+    get_exchangeInfo = ['https://api.binance.com','GET', '/sapi/v1/convert/exchangeInfo', False]  # 查询可交易币对信息 (USER_DATA)
+    get_assetInfo = ['https://api.binance.com','GET', '/sapi/v1/convert/assetInfo', False]  # 查询可交易币种精度 (USER_DATA)
+    set_getQuote = ['https://api.binance.com','POST', '/sapi/v1/convert/getQuote', False]  # 发送获取报价请求 (USER_DATA)
+    set_acceptQuote = ['https://api.binance.com','POST', '/sapi/v1/convert/acceptQuote', False]  # 接受报价 (TRADE)
+    get_orderStatus = ['https://api.binance.com','GET', '/sapi/v1/convert/orderStatus', False]  # 查询订单状态 (USER_DATA)
+    get_tradeFlow = ['https://api.binance.com','GET', '/sapi/v1/convert/tradeFlow', True]  # 获取闪兑交易记录 (USER_DATA)
 
 
 class Convert(Client):

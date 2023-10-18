@@ -5,10 +5,10 @@ from typing import Union
 
 # NFT
 class _NFTEndpoints():
-    get_history_transactions = ['https://api.binance.com/', 'GET', '/sapi/v1/nft/history/transactions', True]  # 获取 NFT 资金流水记录 (USER_DATA)
-    get_history_deposit = ['https://api.binance.com/', 'GET', '/sapi/v1/nft/history/deposit', True]  # 获取 NFT 充值记录 (USER_DATA)
-    get_history_withdraw = ['https://api.binance.com/', 'GET', '/sapi/v1/nft/history/withdraw', True]  # 获取 NFT 提现记录 (USER_DATA)
-    get_user_getAsset = ['https://api.binance.com/', 'GET', '/sapi/v1/nft/user/getAsset', True]  # 获取 NFT 资产 (USER_DATA)
+    get_history_transactions = ['https://api.binance.com', 'GET', '/sapi/v1/nft/history/transactions', True]  # 获取 NFT 资金流水记录 (USER_DATA)
+    get_history_deposit = ['https://api.binance.com', 'GET', '/sapi/v1/nft/history/deposit', True]  # 获取 NFT 充值记录 (USER_DATA)
+    get_history_withdraw = ['https://api.binance.com', 'GET', '/sapi/v1/nft/history/withdraw', True]  # 获取 NFT 提现记录 (USER_DATA)
+    get_user_getAsset = ['https://api.binance.com', 'GET', '/sapi/v1/nft/user/getAsset', True]  # 获取 NFT 资产 (USER_DATA)
 
 
 class Nft(Client):

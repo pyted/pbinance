@@ -4,8 +4,8 @@ from pbinance.client import Client
 
 # 法币
 class _FiatEndpoints():
-    get_orders = ['https://api.binance.com/','GET', '/sapi/v1/fiat/orders', True]  # 获取法币充值/提现历史记录 (USER_DATA)
-    get_payments = ['https://api.binance.com/','GET', '/sapi/v1/fiat/payments', True]  # 获取法币支付历史记录 (USER_DATA)
+    get_orders = ['https://api.binance.com','GET', '/sapi/v1/fiat/orders', True]  # 获取法币充值/提现历史记录 (USER_DATA)
+    get_payments = ['https://api.binance.com','GET', '/sapi/v1/fiat/payments', True]  # 获取法币支付历史记录 (USER_DATA)
 
 
 class Fiat(Client):

@@ -5,31 +5,31 @@ from typing import Union
 
 # 行情信息
 class _UMMarketEndpoints():
-    get_ping = ['https://fapi.binance.com/','GET', '/fapi/v1/ping', False]  # 测试服务器连通性 PING
-    get_time = ['https://fapi.binance.com/','GET', '/fapi/v1/time', False]  # 获取服务器时间
-    get_exchangeInfo = ['https://fapi.binance.com/','GET', '/fapi/v1/exchangeInfo', False]  # 获取交易规则和交易对
-    get_depth = ['https://fapi.binance.com/','GET', '/fapi/v1/depth', False]  # 深度信息
-    get_trades = ['https://fapi.binance.com/','GET', '/fapi/v1/trades', False]  # 近期成交
-    get_historicalTrades = ['https://fapi.binance.com/','GET', '/fapi/v1/historicalTrades', False]  # 查询历史成交(MARKET_DATA)
-    get_aggTrades = ['https://fapi.binance.com/','GET', '/fapi/v1/aggTrades', False]  # 近期成交(归集)
-    get_klines = ['https://fapi.binance.com/','GET', '/fapi/v1/klines', False]  # K线数据
-    get_continuousKlines = ['https://fapi.binance.com/','GET', '/fapi/v1/continuousKlines', False]  # 连续合约K线数据
-    get_indexPriceKlines = ['https://fapi.binance.com/','GET', '/fapi/v1/indexPriceKlines', False]  # 价格指数K线数据
-    get_markPriceKlines = ['https://fapi.binance.com/','GET', '/fapi/v1/markPriceKlines', False]  # 标记价格K线数据
-    get_premiumIndex = ['https://fapi.binance.com/','GET', '/fapi/v1/premiumIndex', False]  # 最新标记价格和资金费率
-    get_fundingRate = ['https://fapi.binance.com/','GET', '/fapi/v1/fundingRate', False]  # 查询资金费率历史
-    get_ticker_24hr = ['https://fapi.binance.com/','GET', '/fapi/v1/ticker/24hr', False]  # 24hr价格变动情况
-    get_ticker_price = ['https://fapi.binance.com/','GET', '/fapi/v1/ticker/price', False]  # 最新价格
-    get_ticker_bookTicker = ['https://fapi.binance.com/','GET', '/fapi/v1/ticker/bookTicker', False]  # 当前最优挂单
-    get_openInterest = ['https://fapi.binance.com/','GET', '/fapi/v1/openInterest', False]  # 获取未平仓合约数
-    get_openInterestHist = ['https://fapi.binance.com/','GET', '/futures/data/openInterestHist', False]  # 合约持仓量
-    get_topLongShortAccountRatio = ['https://fapi.binance.com/','GET', '/futures/data/topLongShortAccountRatio', False]  # 大户账户数多空比
-    get_topLongShortPositionRatio = ['https://fapi.binance.com/','GET', '/futures/data/topLongShortPositionRatio', False]  # 大户持仓量多空比
-    get_globalLongShortAccountRatio = ['https://fapi.binance.com/','GET', '/futures/data/globalLongShortAccountRatio', False]  # 多空持仓人数比
-    get_takerlongshortRatio = ['https://fapi.binance.com/','GET', '/futures/data/takerlongshortRatio', False]  # 合约主动买卖量
-    get_lvtKlines = ['https://fapi.binance.com/','GET', '/fapi/v1/lvtKlines', False]  # 杠杆代币历史净值K线
-    get_indexInfo = ['https://fapi.binance.com/','GET', '/fapi/v1/indexInfo', False]  # 综合指数交易对信息
-    get_assetIndex = ['https://fapi.binance.com/','GET', '/fapi/v1/assetIndex', False]  # 多资产模式资产汇率指数
+    get_ping = ['https://fapi.binance.com','GET', '/fapi/v1/ping', False]  # 测试服务器连通性 PING
+    get_time = ['https://fapi.binance.com','GET', '/fapi/v1/time', False]  # 获取服务器时间
+    get_exchangeInfo = ['https://fapi.binance.com','GET', '/fapi/v1/exchangeInfo', False]  # 获取交易规则和交易对
+    get_depth = ['https://fapi.binance.com','GET', '/fapi/v1/depth', False]  # 深度信息
+    get_trades = ['https://fapi.binance.com','GET', '/fapi/v1/trades', False]  # 近期成交
+    get_historicalTrades = ['https://fapi.binance.com','GET', '/fapi/v1/historicalTrades', False]  # 查询历史成交(MARKET_DATA)
+    get_aggTrades = ['https://fapi.binance.com','GET', '/fapi/v1/aggTrades', False]  # 近期成交(归集)
+    get_klines = ['https://fapi.binance.com','GET', '/fapi/v1/klines', False]  # K线数据
+    get_continuousKlines = ['https://fapi.binance.com','GET', '/fapi/v1/continuousKlines', False]  # 连续合约K线数据
+    get_indexPriceKlines = ['https://fapi.binance.com','GET', '/fapi/v1/indexPriceKlines', False]  # 价格指数K线数据
+    get_markPriceKlines = ['https://fapi.binance.com','GET', '/fapi/v1/markPriceKlines', False]  # 标记价格K线数据
+    get_premiumIndex = ['https://fapi.binance.com','GET', '/fapi/v1/premiumIndex', False]  # 最新标记价格和资金费率
+    get_fundingRate = ['https://fapi.binance.com','GET', '/fapi/v1/fundingRate', False]  # 查询资金费率历史
+    get_ticker_24hr = ['https://fapi.binance.com','GET', '/fapi/v1/ticker/24hr', False]  # 24hr价格变动情况
+    get_ticker_price = ['https://fapi.binance.com','GET', '/fapi/v1/ticker/price', False]  # 最新价格
+    get_ticker_bookTicker = ['https://fapi.binance.com','GET', '/fapi/v1/ticker/bookTicker', False]  # 当前最优挂单
+    get_openInterest = ['https://fapi.binance.com','GET', '/fapi/v1/openInterest', False]  # 获取未平仓合约数
+    get_openInterestHist = ['https://fapi.binance.com','GET', '/futures/data/openInterestHist', False]  # 合约持仓量
+    get_topLongShortAccountRatio = ['https://fapi.binance.com','GET', '/futures/data/topLongShortAccountRatio', False]  # 大户账户数多空比
+    get_topLongShortPositionRatio = ['https://fapi.binance.com','GET', '/futures/data/topLongShortPositionRatio', False]  # 大户持仓量多空比
+    get_globalLongShortAccountRatio = ['https://fapi.binance.com','GET', '/futures/data/globalLongShortAccountRatio', False]  # 多空持仓人数比
+    get_takerlongshortRatio = ['https://fapi.binance.com','GET', '/futures/data/takerlongshortRatio', False]  # 合约主动买卖量
+    get_lvtKlines = ['https://fapi.binance.com','GET', '/fapi/v1/lvtKlines', False]  # 杠杆代币历史净值K线
+    get_indexInfo = ['https://fapi.binance.com','GET', '/fapi/v1/indexInfo', False]  # 综合指数交易对信息
+    get_assetIndex = ['https://fapi.binance.com','GET', '/fapi/v1/assetIndex', False]  # 多资产模式资产汇率指数
 
 
 class UMMarket(Client):

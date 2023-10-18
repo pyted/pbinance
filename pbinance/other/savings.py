@@ -5,20 +5,20 @@ from typing import Union
 
 # 币安宝
 class _SavingsEndpoints():
-    get_daily_product_list = ['https://api.binance.com/','GET', '/sapi/v1/lending/daily/product/list', True]  # 获取活期产品列表 (USER_DATA)
-    get_daily_userLeftQuota = ['https://api.binance.com/','GET', '/sapi/v1/lending/daily/userLeftQuota', True]  # 获取用户当日剩余活期可申购余额 (USER_DATA)
-    set_daily_purchase = ['https://api.binance.com/','POST', '/sapi/v1/lending/daily/purchase', True]  # 申购活期产品 (USER_DATA)
-    get_daily_userRedemptionQuota = ['https://api.binance.com/','GET', '/sapi/v1/lending/daily/userRedemptionQuota', True]  # 获取用户当日活期可赎回余额 (USER_DATA)
-    set_daily_redeem = ['https://api.binance.com/','POST', '/sapi/v1/lending/daily/redeem', True]  # 赎回活期产品 (USER_DATA)
-    get_daily_token_position = ['https://api.binance.com/','GET', '/sapi/v1/lending/daily/token/position', True]  # 用户活期产品持仓 (USER_DATA)
-    get_project_list = ['https://api.binance.com/','GET', '/sapi/v1/lending/project/list', True]  # 查询定期/活动产品列表 (USER_DATA)
-    set_customizedFixed_purchase = ['https://api.binance.com/','POST', '/sapi/v1/lending/customizedFixed/purchase', True]  # 申购定期/活动产品 (USER_DATA)
-    get_project_position_list = ['https://api.binance.com/','GET', '/sapi/v1/lending/project/position/list', True]  # 用户定期/活动持仓 (USER_DATA)
-    get_union_account = ['https://api.binance.com/','GET', '/sapi/v1/lending/union/account', True]  # 币安宝账户信息 (USER_DATA)
-    get_union_purchaseRecord = ['https://api.binance.com/','GET', '/sapi/v1/lending/union/purchaseRecord', True]  # 获取申购记录 (USER_DATA)
-    get_union_redemptionRecord = ['https://api.binance.com/','GET', '/sapi/v1/lending/union/redemptionRecord', True]  # 获取赎回记录 (USER_DATA)
-    get_union_interestHistory = ['https://api.binance.com/','GET', '/sapi/v1/lending/union/interestHistory', True]  # 获取利息历史 (USER_DATA)
-    set_positionChanged = ['https://api.binance.com/','POST', '/sapi/v1/lending/positionChanged', True]  # 定期/活动持仓转活期持仓 (USER_DATA)
+    get_daily_product_list = ['https://api.binance.com','GET', '/sapi/v1/lending/daily/product/list', True]  # 获取活期产品列表 (USER_DATA)
+    get_daily_userLeftQuota = ['https://api.binance.com','GET', '/sapi/v1/lending/daily/userLeftQuota', True]  # 获取用户当日剩余活期可申购余额 (USER_DATA)
+    set_daily_purchase = ['https://api.binance.com','POST', '/sapi/v1/lending/daily/purchase', True]  # 申购活期产品 (USER_DATA)
+    get_daily_userRedemptionQuota = ['https://api.binance.com','GET', '/sapi/v1/lending/daily/userRedemptionQuota', True]  # 获取用户当日活期可赎回余额 (USER_DATA)
+    set_daily_redeem = ['https://api.binance.com','POST', '/sapi/v1/lending/daily/redeem', True]  # 赎回活期产品 (USER_DATA)
+    get_daily_token_position = ['https://api.binance.com','GET', '/sapi/v1/lending/daily/token/position', True]  # 用户活期产品持仓 (USER_DATA)
+    get_project_list = ['https://api.binance.com','GET', '/sapi/v1/lending/project/list', True]  # 查询定期/活动产品列表 (USER_DATA)
+    set_customizedFixed_purchase = ['https://api.binance.com','POST', '/sapi/v1/lending/customizedFixed/purchase', True]  # 申购定期/活动产品 (USER_DATA)
+    get_project_position_list = ['https://api.binance.com','GET', '/sapi/v1/lending/project/position/list', True]  # 用户定期/活动持仓 (USER_DATA)
+    get_union_account = ['https://api.binance.com','GET', '/sapi/v1/lending/union/account', True]  # 币安宝账户信息 (USER_DATA)
+    get_union_purchaseRecord = ['https://api.binance.com','GET', '/sapi/v1/lending/union/purchaseRecord', True]  # 获取申购记录 (USER_DATA)
+    get_union_redemptionRecord = ['https://api.binance.com','GET', '/sapi/v1/lending/union/redemptionRecord', True]  # 获取赎回记录 (USER_DATA)
+    get_union_interestHistory = ['https://api.binance.com','GET', '/sapi/v1/lending/union/interestHistory', True]  # 获取利息历史 (USER_DATA)
+    set_positionChanged = ['https://api.binance.com','POST', '/sapi/v1/lending/positionChanged', True]  # 定期/活动持仓转活期持仓 (USER_DATA)
 
 
 class Savings(Client):

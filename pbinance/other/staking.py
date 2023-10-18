@@ -4,13 +4,13 @@ from typing import Union
 
 # staking接口
 class _StakingEndpoints():
-    get_productList = ['https://api.binance.com/','GET', '/sapi/v1/staking/productList', True]  # 查询Staking产品列表(USER_DATA)
-    set_purchase = ['https://api.binance.com/','POST', '/sapi/v1/staking/purchase', True]  # 申购锁仓产品(USER_DATA)
-    set_redeem = ['https://api.binance.com/','POST', '/sapi/v1/staking/redeem', True]  # 赎回锁仓产品(USER_DATA)
-    get_position = ['https://api.binance.com/','GET', '/sapi/v1/staking/position', True]  # 查看个人持仓(USER_DATA)
-    get_stakingRecord = ['https://api.binance.com/','GET', '/sapi/v1/staking/stakingRecord', True]  # 查看Staking历史记录(USER_DATA)
-    set_setAutoStaking = ['https://api.binance.com/','POST', '/sapi/v1/staking/setAutoStaking', True]  # 设置自动续期(USER_DATA)
-    get_personalLeftQuota = ['https://api.binance.com/','GET', '/sapi/v1/staking/personalLeftQuota', True]  # 查询Staking个人剩余额度(USER_DATA)A
+    get_productList = ['https://api.binance.com','GET', '/sapi/v1/staking/productList', True]  # 查询Staking产品列表(USER_DATA)
+    set_purchase = ['https://api.binance.com','POST', '/sapi/v1/staking/purchase', True]  # 申购锁仓产品(USER_DATA)
+    set_redeem = ['https://api.binance.com','POST', '/sapi/v1/staking/redeem', True]  # 赎回锁仓产品(USER_DATA)
+    get_position = ['https://api.binance.com','GET', '/sapi/v1/staking/position', True]  # 查看个人持仓(USER_DATA)
+    get_stakingRecord = ['https://api.binance.com','GET', '/sapi/v1/staking/stakingRecord', True]  # 查看Staking历史记录(USER_DATA)
+    set_setAutoStaking = ['https://api.binance.com','POST', '/sapi/v1/staking/setAutoStaking', True]  # 设置自动续期(USER_DATA)
+    get_personalLeftQuota = ['https://api.binance.com','GET', '/sapi/v1/staking/personalLeftQuota', True]  # 查询Staking个人剩余额度(USER_DATA)A
 
 
 class Staking(Client):

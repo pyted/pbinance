@@ -3,6 +3,7 @@ import hashlib
 import requests
 import urllib.parse as up
 import time
+from pbinance.proxy_host import proxy_host_map
 
 
 def request_retry_wrapper(retry_num=50, retry_delay=0.1):
@@ -26,9 +27,11 @@ def request_retry_wrapper(retry_num=50, retry_delay=0.1):
 
 
 class Client():
-    def __init__(self, key='', secret=''):
+    def __init__(self, key='', secret='', proxies={}, proxy_host: str = None):
         self.key = key
         self.secret = secret
+        self.proxies = proxies
+        self.proxy_host = proxy_host
         self.session = requests.Session()
         self.session.headers.update(
             {
@@ -49,8 +52,11 @@ class Client():
             query_string = up.urlencode(params_no_empty, True).replace("%40", "@")
             signature = self._get_sign(query_string)
             params_no_empty["signature"] = signature
-        url = up.urljoin(api_url, path)
-
+        if not self.proxy_host:
+            url = up.urljoin(api_url, path)
+        else:
+            proxy_api_url = proxy_host_map[api_url].format(host=self.proxy_host)
+            url = proxy_api_url + path
 
         response = getattr(self.session, method.lower())(
             url=url,

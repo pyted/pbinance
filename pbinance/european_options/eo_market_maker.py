@@ -5,13 +5,13 @@ from typing import Union
 
 # 市商
 class _EOMarketMakerEndpoints():
-    get_marginAccount = ['https://eapi.binance.com/','GET', '/eapi/v1/marginAccount', True]  # 保证金账户信息
-    set_mmpSet = ['https://eapi.binance.com/','POST', '/eapi/v1/mmpSet', True]  # 设置MMP规则
-    get_mmpSet = ['https://eapi.binance.com/','GET', '/eapi/v1/mmpSet', True]  # 获取MMP规则
-    set_mmpReset = ['https://eapi.binance.com/','POST', '/eapi/v1/mmpReset', True]  # 重置MMP状态
-    set_countdownCancelAll = ['https://eapi.binance.com/','POST', '/eapi/v1/countdownCancelAll', True]  # 设置倒计时取消所有订单配置 (TRADE)
-    get_countdownCancelAll = ['https://eapi.binance.com/','GET', '/eapi/v1/countdownCancelAll', True]  # 获得倒计时自动取消所有订单配置 (TRADE)
-    set_countdownCancelAllHeartBeat = ['https://eapi.binance.com/','POST', '/eapi/v1/countdownCancelAllHeartBeat', True]  #重置倒计时取消所有订单心跳 (TRADE)
+    get_marginAccount = ['https://eapi.binance.com','GET', '/eapi/v1/marginAccount', True]  # 保证金账户信息
+    set_mmpSet = ['https://eapi.binance.com','POST', '/eapi/v1/mmpSet', True]  # 设置MMP规则
+    get_mmpSet = ['https://eapi.binance.com','GET', '/eapi/v1/mmpSet', True]  # 获取MMP规则
+    set_mmpReset = ['https://eapi.binance.com','POST', '/eapi/v1/mmpReset', True]  # 重置MMP状态
+    set_countdownCancelAll = ['https://eapi.binance.com','POST', '/eapi/v1/countdownCancelAll', True]  # 设置倒计时取消所有订单配置 (TRADE)
+    get_countdownCancelAll = ['https://eapi.binance.com','GET', '/eapi/v1/countdownCancelAll', True]  # 获得倒计时自动取消所有订单配置 (TRADE)
+    set_countdownCancelAllHeartBeat = ['https://eapi.binance.com','POST', '/eapi/v1/countdownCancelAllHeartBeat', True]  #重置倒计时取消所有订单心跳 (TRADE)
 
 
 class EOMarketMaker(Client):

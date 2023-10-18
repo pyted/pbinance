@@ -5,7 +5,7 @@ from typing import Union
 
 # 返佣
 class _RebateEndpoints():
-    get_taxQuery = ['https://api.binance.com/', 'GET', '/sapi/v1/rebate/taxQuery', True]  # 获取现货返佣历史记录 (USER_DATA)
+    get_taxQuery = ['https://api.binance.com', 'GET', '/sapi/v1/rebate/taxQuery', True]  # 获取现货返佣历史记录 (USER_DATA)
 
 
 class Rebate(Client):

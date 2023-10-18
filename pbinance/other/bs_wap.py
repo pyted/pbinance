@@ -4,20 +4,20 @@ from typing import Union
 
 
 class _BSwapEndpoints():
-    get_pools = ['https://api.binance.com/','GET', '/sapi/v1/bswap/pools', False]  # 获取所有流动资金池 (MARKET_DATA)
-    get_liquidity = ['https://api.binance.com/','GET', '/sapi/v1/bswap/liquidity', True]  # 获取流动资金池具体信息 (USER_DATA)
-    set_liquidityAdd = ['https://api.binance.com/','POST', '/sapi/v1/bswap/liquidityAdd', True]  # 添加流动性 (TRADE)
-    set_liquidityRemove = ['https://api.binance.com/','POST', '/sapi/v1/bswap/liquidityRemove', True]  # 移除流动性 (TRADE)
-    get_liquidityOps = ['https://api.binance.com/','GET', '/sapi/v1/bswap/liquidityOps', True]  # 获取流动性操作记录 (USER_DATA)
-    get_quote = ['https://api.binance.com/','GET', '/sapi/v1/bswap/quote', True]  # 获取报价 (USER_DATA)
-    set_swap = ['https://api.binance.com/','POST', '/sapi/v1/bswap/swap', True]  # 交易 (TRADE)
-    get_swap = ['https://api.binance.com/','GET', '/sapi/v1/bswap/swap', True]  # 获取交易记录 (USER_DATA)
-    get_poolConfigure = ['https://api.binance.com/','GET', '/sapi/v1/bswap/poolConfigure', True]  # 获取币对池的配置信息 (USER_DATA)
-    get_addLiquidityPreview = ['https://api.binance.com/','GET', '/sapi/v1/bswap/addLiquidityPreview', True]  # 添加流动性的试算 (USER_DATA)
-    get_removeLiquidityPreview = ['https://api.binance.com/','GET', '/sapi/v1/bswap/removeLiquidityPreview', True]  # 移除流动性的试算 (USER_DATA)
-    get_unclaimedRewards = ['https://api.binance.com/','GET', '/sapi/v1/bswap/unclaimedRewards', True]  # 查询未领取的奖励数量 (USER_DATA)
-    set_claimRewards = ['https://api.binance.com/','POST', '/sapi/v1/bswap/claimRewards', True]  # 领取奖励 (TRADE)
-    set_claimedHistory = ['https://api.binance.com/','GET', '/sapi/v1/bswap/claimedHistory', True]  # 获取已领取奖励记录 (USER_DATA)
+    get_pools = ['https://api.binance.com','GET', '/sapi/v1/bswap/pools', False]  # 获取所有流动资金池 (MARKET_DATA)
+    get_liquidity = ['https://api.binance.com','GET', '/sapi/v1/bswap/liquidity', True]  # 获取流动资金池具体信息 (USER_DATA)
+    set_liquidityAdd = ['https://api.binance.com','POST', '/sapi/v1/bswap/liquidityAdd', True]  # 添加流动性 (TRADE)
+    set_liquidityRemove = ['https://api.binance.com','POST', '/sapi/v1/bswap/liquidityRemove', True]  # 移除流动性 (TRADE)
+    get_liquidityOps = ['https://api.binance.com','GET', '/sapi/v1/bswap/liquidityOps', True]  # 获取流动性操作记录 (USER_DATA)
+    get_quote = ['https://api.binance.com','GET', '/sapi/v1/bswap/quote', True]  # 获取报价 (USER_DATA)
+    set_swap = ['https://api.binance.com','POST', '/sapi/v1/bswap/swap', True]  # 交易 (TRADE)
+    get_swap = ['https://api.binance.com','GET', '/sapi/v1/bswap/swap', True]  # 获取交易记录 (USER_DATA)
+    get_poolConfigure = ['https://api.binance.com','GET', '/sapi/v1/bswap/poolConfigure', True]  # 获取币对池的配置信息 (USER_DATA)
+    get_addLiquidityPreview = ['https://api.binance.com','GET', '/sapi/v1/bswap/addLiquidityPreview', True]  # 添加流动性的试算 (USER_DATA)
+    get_removeLiquidityPreview = ['https://api.binance.com','GET', '/sapi/v1/bswap/removeLiquidityPreview', True]  # 移除流动性的试算 (USER_DATA)
+    get_unclaimedRewards = ['https://api.binance.com','GET', '/sapi/v1/bswap/unclaimedRewards', True]  # 查询未领取的奖励数量 (USER_DATA)
+    set_claimRewards = ['https://api.binance.com','POST', '/sapi/v1/bswap/claimRewards', True]  # 领取奖励 (TRADE)
+    set_claimedHistory = ['https://api.binance.com','GET', '/sapi/v1/bswap/claimedHistory', True]  # 获取已领取奖励记录 (USER_DATA)
 
 
 class Bswap(Client):

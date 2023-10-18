@@ -5,14 +5,14 @@ from typing import Union
 
 # 合约
 class _FuturesEndpoints():
-    set_transfer = ['https://api.binance.com/','POST', '/sapi/v1/futures/transfer', True]  # 合约资金划转 (USER_DATA)
-    get_transfer = ['https://api.binance.com/','GET', '/sapi/v1/futures/transfer', True]  # 获取合约资金划转历史 (USER_DATA)
-    get_loan_borrow_history = ['https://api.binance.com/','GET', '/sapi/v1/futures/loan/borrow/history', True]  # 混合保证金借款历史 (USER_DATA)
-    get_loan_repay_history = ['https://api.binance.com/','GET', '/sapi/v1/futures/loan/repay/history', True]  # 混合保证金还款历史 (USER_DATA)
-    get_loan_wallet = ['https://api.binance.com/','GET', '/sapi/v2/futures/loan/wallet', True]  # 混合保证金钱包V2 (USER_DATA)
-    get_loan_adjustCollateral_history = ['https://api.binance.com/','GET', '/sapi/v1/futures/loan/adjustCollateral/history', True]  # 混合保证金调整质押率历史 (USER_DATA)
-    get_loan_liquidationHistory = ['https://api.binance.com/','GET', '/sapi/v1/futures/loan/liquidationHistory', True]  # 混合保证金强平历史 (USER_DATA)
-    get_loan_interestHistory = ['https://api.binance.com/','GET', '/sapi/v1/futures/loan/interestHistory', True]  # 混合保证金利息收取历史 (USER_DATA)
+    set_transfer = ['https://api.binance.com','POST', '/sapi/v1/futures/transfer', True]  # 合约资金划转 (USER_DATA)
+    get_transfer = ['https://api.binance.com','GET', '/sapi/v1/futures/transfer', True]  # 获取合约资金划转历史 (USER_DATA)
+    get_loan_borrow_history = ['https://api.binance.com','GET', '/sapi/v1/futures/loan/borrow/history', True]  # 混合保证金借款历史 (USER_DATA)
+    get_loan_repay_history = ['https://api.binance.com','GET', '/sapi/v1/futures/loan/repay/history', True]  # 混合保证金还款历史 (USER_DATA)
+    get_loan_wallet = ['https://api.binance.com','GET', '/sapi/v2/futures/loan/wallet', True]  # 混合保证金钱包V2 (USER_DATA)
+    get_loan_adjustCollateral_history = ['https://api.binance.com','GET', '/sapi/v1/futures/loan/adjustCollateral/history', True]  # 混合保证金调整质押率历史 (USER_DATA)
+    get_loan_liquidationHistory = ['https://api.binance.com','GET', '/sapi/v1/futures/loan/liquidationHistory', True]  # 混合保证金强平历史 (USER_DATA)
+    get_loan_interestHistory = ['https://api.binance.com','GET', '/sapi/v1/futures/loan/interestHistory', True]  # 混合保证金利息收取历史 (USER_DATA)
 
 
 class Future(Client):

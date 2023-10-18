@@ -4,9 +4,9 @@ from typing import Union
 
 
 class _VIPLoansEndpoints():
-    get_ongoing_orders = ['https://api.binance.com/','GET', '/sapi/v1/loan/vip/ongoing/orders', False]  # 查询VIP借币借款中订单 (USER_DATA)
-    set_repay = ['https://api.binance.com/','POST', '/sapi/v1/loan/vip/repay', False]  # VIP借币还款 (TRADE)
-    get_repay_history = ['https://api.binance.com/','GET', '/sapi/v1/loan/vip/repay/history', False]  # 查询VIP借币还款记录历史 (USER_DATA)
+    get_ongoing_orders = ['https://api.binance.com','GET', '/sapi/v1/loan/vip/ongoing/orders', False]  # 查询VIP借币借款中订单 (USER_DATA)
+    set_repay = ['https://api.binance.com','POST', '/sapi/v1/loan/vip/repay', False]  # VIP借币还款 (TRADE)
+    get_repay_history = ['https://api.binance.com','GET', '/sapi/v1/loan/vip/repay/history', False]  # 查询VIP借币还款记录历史 (USER_DATA)
 
 
 class VIPLoans(Client):

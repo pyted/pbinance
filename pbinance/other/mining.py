@@ -5,20 +5,20 @@ from typing import Union
 
 # 矿池
 class _MiningEndpoints():
-    get_pub_algoList = ['https://api.binance.com/','GET', '/sapi/v1/mining/pub/algoList', True]  # 获取算法(MARKET_DATA)
-    get_pub_coinList = ['https://api.binance.com/','GET', '/sapi/v1/mining/pub/coinList', True]  # 获取币种(MARKET_DATA)
-    get_worker_detail = ['https://api.binance.com/','GET', '/sapi/v1/mining/worker/detail', True]  # 请求矿工列表明细 (USER_DATA)
-    get_worker_list = ['https://api.binance.com/','GET', '/sapi/v1/mining/worker/list', True]  # 请求矿工列表 (USER_DATA)
-    get_payment_list = ['https://api.binance.com/','GET', '/sapi/v1/mining/payment/list', True]  # 收益列表 (USER_DATA)
-    get_payment_other = ['https://api.binance.com/','GET', '/sapi/v1/mining/payment/other', True]  # 其他收益列表 (USER_DATA)
-    get_hash_transfer_config_details = ['https://api.binance.com/','GET', '/sapi/v1/mining/hash-transfer/config/details', True]  # 算力转让详情列表 (USER_DATA)
-    get_hash_transfer_config_details_list = ['https://api.binance.com/','GET', '/sapi/v1/mining/hash-transfer/config/details/list', True]  # 算力转让列表 (USER_DATA)
-    get_hash_transfer_profit_details = ['https://api.binance.com/','GET', '/sapi/v1/mining/hash-transfer/profit/details', True]  # 算力转让详情 (USER_DATA)
-    set_hash_transfer_config = ['https://api.binance.com/','POST', '/sapi/v1/mining/hash-transfer/config', True]  # 算力转让请求 (USER_DATA)
-    set_hash_transfer_config_cancel = ['https://api.binance.com/','POST', '/sapi/v1/mining/hash-transfer/config/cancel', True]  # 取消算力转让设置 (USER_DATA)
-    get_statistics_user_status = ['https://api.binance.com/','GET', '/sapi/v1/mining/statistics/user/status', True]  # 统计列表 (USER_DATA)
-    get_statistics_user_list = ['https://api.binance.com/','GET', '/sapi/v1/mining/statistics/user/list', True]  # 账号列表 (USER_DATA)
-    get_payment_uid = ['https://api.binance.com/','GET', '/sapi/v1/mining/payment/uid', True]  # 矿池账户收益列表 (USER_DATA)
+    get_pub_algoList = ['https://api.binance.com','GET', '/sapi/v1/mining/pub/algoList', True]  # 获取算法(MARKET_DATA)
+    get_pub_coinList = ['https://api.binance.com','GET', '/sapi/v1/mining/pub/coinList', True]  # 获取币种(MARKET_DATA)
+    get_worker_detail = ['https://api.binance.com','GET', '/sapi/v1/mining/worker/detail', True]  # 请求矿工列表明细 (USER_DATA)
+    get_worker_list = ['https://api.binance.com','GET', '/sapi/v1/mining/worker/list', True]  # 请求矿工列表 (USER_DATA)
+    get_payment_list = ['https://api.binance.com','GET', '/sapi/v1/mining/payment/list', True]  # 收益列表 (USER_DATA)
+    get_payment_other = ['https://api.binance.com','GET', '/sapi/v1/mining/payment/other', True]  # 其他收益列表 (USER_DATA)
+    get_hash_transfer_config_details = ['https://api.binance.com','GET', '/sapi/v1/mining/hash-transfer/config/details', True]  # 算力转让详情列表 (USER_DATA)
+    get_hash_transfer_config_details_list = ['https://api.binance.com','GET', '/sapi/v1/mining/hash-transfer/config/details/list', True]  # 算力转让列表 (USER_DATA)
+    get_hash_transfer_profit_details = ['https://api.binance.com','GET', '/sapi/v1/mining/hash-transfer/profit/details', True]  # 算力转让详情 (USER_DATA)
+    set_hash_transfer_config = ['https://api.binance.com','POST', '/sapi/v1/mining/hash-transfer/config', True]  # 算力转让请求 (USER_DATA)
+    set_hash_transfer_config_cancel = ['https://api.binance.com','POST', '/sapi/v1/mining/hash-transfer/config/cancel', True]  # 取消算力转让设置 (USER_DATA)
+    get_statistics_user_status = ['https://api.binance.com','GET', '/sapi/v1/mining/statistics/user/status', True]  # 统计列表 (USER_DATA)
+    get_statistics_user_list = ['https://api.binance.com','GET', '/sapi/v1/mining/statistics/user/list', True]  # 账号列表 (USER_DATA)
+    get_payment_uid = ['https://api.binance.com','GET', '/sapi/v1/mining/payment/uid', True]  # 矿池账户收益列表 (USER_DATA)
 
 
 class Mining(Client):

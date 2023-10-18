@@ -3,7 +3,7 @@ from pbinance.client import Client
 
 
 class _PayEndpoints():
-    get_transactions = ['https://api.binance.com/','GET', '/sapi/v1/pay/transactions', True]  # 获取 Pay 交易历史记录 (USER_DATA)
+    get_transactions = ['https://api.binance.com','GET', '/sapi/v1/pay/transactions', True]  # 获取 Pay 交易历史记录 (USER_DATA)
 
 
 class Pay(Client):

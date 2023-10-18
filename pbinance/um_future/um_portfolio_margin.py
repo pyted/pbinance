@@ -5,8 +5,8 @@ from typing import Union
 
 # 统一账户
 class _UMPortfolioMarginEndpoints():
-    get_pmExchangeInfo = ['https://fapi.binance.com/', 'GET', '/fapi/v1/pmExchangeInfo', False]  # 获取统一账户交易规则
-    get_pmAccountInfo = ['https://fapi.binance.com/', 'GET', '/fapi/v1/pmAccountInfo', False]  # 查询统一账户账户信息 (USER_DATA)
+    get_pmExchangeInfo = ['https://fapi.binance.com', 'GET', '/fapi/v1/pmExchangeInfo', False]  # 获取统一账户交易规则
+    get_pmAccountInfo = ['https://fapi.binance.com', 'GET', '/fapi/v1/pmAccountInfo', False]  # 查询统一账户账户信息 (USER_DATA)
 
 
 class UMPortfolioMargin(Client):

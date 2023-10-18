@@ -1,4 +1,4 @@
-# pbinance 说明文档 v1.0.6
+# pbinance 说明文档 v1.0.7
 
 ## 1 pbinance设计目的
 

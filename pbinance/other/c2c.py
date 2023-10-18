@@ -3,7 +3,7 @@ from pbinance.client import Client
 
 
 class _C2CEndpoints():
-    get_orderMatch_listUserOrderHistory = ['https://api.binance.com/','GET', '/sapi/v1/c2c/orderMatch/listUserOrderHistory', True]  # 获取 C2C 交易历史记录 (USER_DATA)
+    get_orderMatch_listUserOrderHistory = ['https://api.binance.com','GET', '/sapi/v1/c2c/orderMatch/listUserOrderHistory', True]  # 获取 C2C 交易历史记录 (USER_DATA)
 
 
 class C2c(Client):

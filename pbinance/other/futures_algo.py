@@ -5,12 +5,12 @@ from typing import Union
 
 # 合约策略
 class _FuturesAlgoEndpoints():
-    set_newOrderVp = ['https://api.binance.com/','POST', '/sapi/v1/algo/futures/newOrderVp', True]  # 成交量份额参与算法(VP)下单 (TRADE)
-    set_newOrderTwap = ['https://api.binance.com/','POST', '/sapi/v1/algo/futures/newOrderTwap', True]  # 时间加权平均价格策略(Twap)下单 (TRADE)
-    delete_order = ['https://api.binance.com/','DELETE', '/sapi/v1/algo/futures/order', True]  # 取消策略订单 (TRADE)
-    get_openOrders = ['https://api.binance.com/','GET', '/sapi/v1/algo/futures/openOrders', True]  # 查询当前策略订单挂单 (USER_DATA)
-    get_historicalOrders = ['https://api.binance.com/','GET', '/sapi/v1/algo/futures/historicalOrders', True]  # 查询历史策略订单 (USER_DATA)
-    get_subOrders = ['https://api.binance.com/','GET', '/sapi/v1/algo/futures/subOrders', True]  # 查询执行子订单 (USER_DATA)
+    set_newOrderVp = ['https://api.binance.com','POST', '/sapi/v1/algo/futures/newOrderVp', True]  # 成交量份额参与算法(VP)下单 (TRADE)
+    set_newOrderTwap = ['https://api.binance.com','POST', '/sapi/v1/algo/futures/newOrderTwap', True]  # 时间加权平均价格策略(Twap)下单 (TRADE)
+    delete_order = ['https://api.binance.com','DELETE', '/sapi/v1/algo/futures/order', True]  # 取消策略订单 (TRADE)
+    get_openOrders = ['https://api.binance.com','GET', '/sapi/v1/algo/futures/openOrders', True]  # 查询当前策略订单挂单 (USER_DATA)
+    get_historicalOrders = ['https://api.binance.com','GET', '/sapi/v1/algo/futures/historicalOrders', True]  # 查询历史策略订单 (USER_DATA)
+    get_subOrders = ['https://api.binance.com','GET', '/sapi/v1/algo/futures/subOrders', True]  # 查询执行子订单 (USER_DATA)
 
 
 class FuturesAlgo(Client):

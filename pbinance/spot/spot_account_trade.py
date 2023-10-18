@@ -4,22 +4,22 @@ from typing import Union
 
 # 账户与交易
 class _SPOTAccountTradeEndpoints():
-    set_order_test = ['https://api.binance.com/','POST', '/api/v3/order/test', True]  # 测试下单 (TRADE)
-    set_order = ['https://api.binance.com/','POST', '/api/v3/order', True]  # 下单 (TRADE)
-    cancel_order = ['https://api.binance.com/','DELETE', '/api/v3/order', True]  # 撤销订单 (TRADE)
-    cancel_openOrders = ['https://api.binance.com/','DELETE', '/api/v3/openOrders', False]  # 撤销单一交易对的所有挂单 (TRADE)
-    order_cancelReplace = ['https://api.binance.com/','POST', '/api/v3/order/cancelReplace', False]  # 撤消挂单再下单 (TRADE)
-    get_order = ['https://api.binance.com/','GET', '/api/v3/order', True]  # 查询订单 (USER_DATA)
-    get_openOrders = ['https://api.binance.com/','GET', '/api/v3/openOrders', True]  # 当前挂单 (USER_DATA)
-    get_allOrders = ['https://api.binance.com/','GET', '/api/v3/allOrders', True]  # 查询所有订单 (USER_DATA)
-    set_order_oco = ['https://api.binance.com/','POST', '/api/v3/order/oco', True]  # OCO下单(TRADE)
-    cancel_orderList = ['https://api.binance.com/','DELETE', '/api/v3/orderList', True]  # 取消 OCO 订单(TRADE)
-    get_orderList = ['https://api.binance.com/','GET', '/api/v3/orderList', True]  # 查询 OCO (USER_DATA)
-    get_allOrderList = ['https://api.binance.com/','GET', '/api/v3/allOrderList', True]  # 查询所有 OCO (USER_DATA)
-    get_openOrderList = ['https://api.binance.com/','GET', '/api/v3/openOrderList', True]  # 查询 OCO 挂单 (USER_DATA)
-    get_account = ['https://api.binance.com/','GET', '/api/v3/account', True]  # 账户信息 (USER_DATA)
-    get_myTrades = ['https://api.binance.com/','GET', '/api/v3/myTrades', True]  # 账户成交历史 (USER_DATA)
-    get_rateLimit_order = ['https://api.binance.com/','GET', '/api/v3/rateLimit/order', False]  # 查询目前下单数 (TRADE)
+    set_order_test = ['https://api.binance.com','POST', '/api/v3/order/test', True]  # 测试下单 (TRADE)
+    set_order = ['https://api.binance.com','POST', '/api/v3/order', True]  # 下单 (TRADE)
+    cancel_order = ['https://api.binance.com','DELETE', '/api/v3/order', True]  # 撤销订单 (TRADE)
+    cancel_openOrders = ['https://api.binance.com','DELETE', '/api/v3/openOrders', False]  # 撤销单一交易对的所有挂单 (TRADE)
+    order_cancelReplace = ['https://api.binance.com','POST', '/api/v3/order/cancelReplace', False]  # 撤消挂单再下单 (TRADE)
+    get_order = ['https://api.binance.com','GET', '/api/v3/order', True]  # 查询订单 (USER_DATA)
+    get_openOrders = ['https://api.binance.com','GET', '/api/v3/openOrders', True]  # 当前挂单 (USER_DATA)
+    get_allOrders = ['https://api.binance.com','GET', '/api/v3/allOrders', True]  # 查询所有订单 (USER_DATA)
+    set_order_oco = ['https://api.binance.com','POST', '/api/v3/order/oco', True]  # OCO下单(TRADE)
+    cancel_orderList = ['https://api.binance.com','DELETE', '/api/v3/orderList', True]  # 取消 OCO 订单(TRADE)
+    get_orderList = ['https://api.binance.com','GET', '/api/v3/orderList', True]  # 查询 OCO (USER_DATA)
+    get_allOrderList = ['https://api.binance.com','GET', '/api/v3/allOrderList', True]  # 查询所有 OCO (USER_DATA)
+    get_openOrderList = ['https://api.binance.com','GET', '/api/v3/openOrderList', True]  # 查询 OCO 挂单 (USER_DATA)
+    get_account = ['https://api.binance.com','GET', '/api/v3/account', True]  # 账户信息 (USER_DATA)
+    get_myTrades = ['https://api.binance.com','GET', '/api/v3/myTrades', True]  # 账户成交历史 (USER_DATA)
+    get_rateLimit_order = ['https://api.binance.com','GET', '/api/v3/rateLimit/order', False]  # 查询目前下单数 (TRADE)
 
 
 class SPOTAccountTrade(Client):

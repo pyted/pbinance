@@ -4,12 +4,12 @@ from typing import Union
 
 
 class _BlvtEndpoints():
-    get_tokenInfo = ['https://api.binance.com/','GET', '/sapi/v1/blvt/tokenInfo', False]  # 杠杆代币信息 (MARKET_DATA)
-    set_subscribe = ['https://api.binance.com/','POST', '/sapi/v1/blvt/subscribe', True]  # 申购代币 (USER_DATA)
-    get_subscribe_record = ['https://api.binance.com/','GET', '/sapi/v1/blvt/subscribe/record', True]  # 查询申购记录 (USER_DATA)
-    set_redeem = ['https://api.binance.com/','POST', '/sapi/v1/blvt/redeem', True]  # 赎回代币 (USER_DATA)
-    get_redeem_record = ['https://api.binance.com/','GET', '/sapi/v1/blvt/redeem/record', True]  # 查询赎回记录 (USER_DATA)
-    get_userLimit = ['https://api.binance.com/','GET', '/sapi/v1/blvt/userLimit', True]  # 查询用户每日申购赎回限额 (USER_DATA)
+    get_tokenInfo = ['https://api.binance.com','GET', '/sapi/v1/blvt/tokenInfo', False]  # 杠杆代币信息 (MARKET_DATA)
+    set_subscribe = ['https://api.binance.com','POST', '/sapi/v1/blvt/subscribe', True]  # 申购代币 (USER_DATA)
+    get_subscribe_record = ['https://api.binance.com','GET', '/sapi/v1/blvt/subscribe/record', True]  # 查询申购记录 (USER_DATA)
+    set_redeem = ['https://api.binance.com','POST', '/sapi/v1/blvt/redeem', True]  # 赎回代币 (USER_DATA)
+    get_redeem_record = ['https://api.binance.com','GET', '/sapi/v1/blvt/redeem/record', True]  # 查询赎回记录 (USER_DATA)
+    get_userLimit = ['https://api.binance.com','GET', '/sapi/v1/blvt/userLimit', True]  # 查询用户每日申购赎回限额 (USER_DATA)
 
 
 class Blvt(Client):

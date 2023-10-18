@@ -4,20 +4,20 @@ from typing import Union
 
 # 行情信息
 class _SPOTMarketEndpoints():
-    get_ping = ['https://api.binance.com/', 'GET', '/api/v3/ping', False]  # 测试服务器连通性
-    get_time = ['https://api.binance.com/', 'GET', '/api/v3/time', False]  # 获取服务器时间
-    get_exchangeInfo = ['https://api.binance.com/', 'GET', '/api/v3/exchangeInfo', False]  # 交易规范信息
-    get_depth = ['https://api.binance.com/', 'GET', '/api/v3/depth', False]  # 深度信息
-    get_trades = ['https://api.binance.com/', 'GET', '/api/v3/trades', False]  # 近期成交列表
-    get_historicalTrades = ['https://api.binance.com/', 'GET', '/api/v3/historicalTrades', False]  # 查询历史成交 (MARKET_DATA)
-    get_aggTrades = ['https://api.binance.com/', 'GET', '/api/v3/aggTrades', False]  # 近期成交(归集)
-    get_klines = ['https://api.binance.com/', 'GET', '/api/v3/klines', False]  # K线数据
-    get_avgPrice = ['https://api.binance.com/', 'GET', '/api/v3/avgPrice', False]  # 当前平均价格
-    get_uiKlines = ['https://api.binance.com/', 'GET', '/api/v3/uiKlines', False]  # UIK线数据
-    get_ticker_24hr = ['https://api.binance.com/', 'GET', '/api/v3/ticker/24hr', False]  # 24hr 价格变动情况
-    get_ticker_price = ['https://api.binance.com/', 'GET', '/api/v3/ticker/price', False]  # 最新价格
-    get_ticker_bookTicker = ['https://api.binance.com/', 'GET', '/api/v3/ticker/bookTicker', False]  # 当前最优挂单
-    get_ticker = ['https://api.binance.com/', 'GET', '/api/v3/ticker', False]  # 滚动窗口价格变动统计
+    get_ping = ['https://api.binance.com', 'GET', '/api/v3/ping', False]  # 测试服务器连通性
+    get_time = ['https://api.binance.com', 'GET', '/api/v3/time', False]  # 获取服务器时间
+    get_exchangeInfo = ['https://api.binance.com', 'GET', '/api/v3/exchangeInfo', False]  # 交易规范信息
+    get_depth = ['https://api.binance.com', 'GET', '/api/v3/depth', False]  # 深度信息
+    get_trades = ['https://api.binance.com', 'GET', '/api/v3/trades', False]  # 近期成交列表
+    get_historicalTrades = ['https://api.binance.com', 'GET', '/api/v3/historicalTrades', False]  # 查询历史成交 (MARKET_DATA)
+    get_aggTrades = ['https://api.binance.com', 'GET', '/api/v3/aggTrades', False]  # 近期成交(归集)
+    get_klines = ['https://api.binance.com', 'GET', '/api/v3/klines', False]  # K线数据
+    get_avgPrice = ['https://api.binance.com', 'GET', '/api/v3/avgPrice', False]  # 当前平均价格
+    get_uiKlines = ['https://api.binance.com', 'GET', '/api/v3/uiKlines', False]  # UIK线数据
+    get_ticker_24hr = ['https://api.binance.com', 'GET', '/api/v3/ticker/24hr', False]  # 24hr 价格变动情况
+    get_ticker_price = ['https://api.binance.com', 'GET', '/api/v3/ticker/price', False]  # 最新价格
+    get_ticker_bookTicker = ['https://api.binance.com', 'GET', '/api/v3/ticker/bookTicker', False]  # 当前最优挂单
+    get_ticker = ['https://api.binance.com', 'GET', '/api/v3/ticker', False]  # 滚动窗口价格变动统计
 
 
 class SPOTMarket(Client):

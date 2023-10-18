@@ -4,18 +4,18 @@ from typing import Union
 
 # 行情信息
 class _EOMarketEndpoints():
-    get_ping = ['https://eapi.binance.com/','GET', '/eapi/v1/ping', False]  # 测试服务器连通性 PING
-    get_time = ['https://eapi.binance.com/','GET', '/eapi/v1/time', False]  # 获取服务器时间
-    get_exchangeInfo = ['https://eapi.binance.com/','GET', '/eapi/v1/exchangeInfo', False]  # 获取交易规则和交易对
-    get_depth = ['https://eapi.binance.com/','GET', '/eapi/v1/depth', False]  # 深度信息
-    get_trades = ['https://eapi.binance.com/','GET', '/eapi/v1/trades', False]  # 近期成交
-    get_historicalTrades = ['https://eapi.binance.com/','GET', '/eapi/v1/historicalTrades', False]  # 查询历史成交(MARKET_DATA)
-    get_klines = ['https://eapi.binance.com/','GET', '/eapi/v1/klines', False]  # K线数据
-    get_mark = ['https://eapi.binance.com/','GET', '/eapi/v1/mark', False]  # 查询期权标记价格
-    get_ticker = ['https://eapi.binance.com/','GET', '/eapi/v1/ticker', False]  # 24hr价格变动情况
-    get_index = ['https://eapi.binance.com/','GET', '/eapi/v1/index', False]  # 标的最新价格
-    get_exerciseHistory = ['https://eapi.binance.com/','GET', '/eapi/v1/exerciseHistory', False]  # 历史行权记录
-    get_openInterest = ['https://eapi.binance.com/','GET', '/eapi/v1/openInterest', False]  # 合约持仓量
+    get_ping = ['https://eapi.binance.com','GET', '/eapi/v1/ping', False]  # 测试服务器连通性 PING
+    get_time = ['https://eapi.binance.com','GET', '/eapi/v1/time', False]  # 获取服务器时间
+    get_exchangeInfo = ['https://eapi.binance.com','GET', '/eapi/v1/exchangeInfo', False]  # 获取交易规则和交易对
+    get_depth = ['https://eapi.binance.com','GET', '/eapi/v1/depth', False]  # 深度信息
+    get_trades = ['https://eapi.binance.com','GET', '/eapi/v1/trades', False]  # 近期成交
+    get_historicalTrades = ['https://eapi.binance.com','GET', '/eapi/v1/historicalTrades', False]  # 查询历史成交(MARKET_DATA)
+    get_klines = ['https://eapi.binance.com','GET', '/eapi/v1/klines', False]  # K线数据
+    get_mark = ['https://eapi.binance.com','GET', '/eapi/v1/mark', False]  # 查询期权标记价格
+    get_ticker = ['https://eapi.binance.com','GET', '/eapi/v1/ticker', False]  # 24hr价格变动情况
+    get_index = ['https://eapi.binance.com','GET', '/eapi/v1/index', False]  # 标的最新价格
+    get_exerciseHistory = ['https://eapi.binance.com','GET', '/eapi/v1/exerciseHistory', False]  # 历史行权记录
+    get_openInterest = ['https://eapi.binance.com','GET', '/eapi/v1/openInterest', False]  # 合约持仓量
 
 class EOMarket(Client):
     endpoints = _EOMarketEndpoints

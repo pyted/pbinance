@@ -5,29 +5,29 @@ from typing import Union
 
 # 行情信息
 class _CMMarketEndpoints():
-    get_ping = ['https://dapi.binance.com/','GET', '/dapi/v1/ping', False]  # 测试服务器连通性 PING
-    get_time = ['https://dapi.binance.com/','GET', '/dapi/v1/time', False]  # 获取服务器时间
-    get_exchangeInfo = ['https://dapi.binance.com/','GET', '/dapi/v1/exchangeInfo', False]  # 获取交易规则和交易对
-    get_depth = ['https://dapi.binance.com/','GET', '/dapi/v1/depth', False]  # 深度信息
-    get_trades = ['https://dapi.binance.com/','GET', '/dapi/v1/trades', False]  # 近期成交
-    get_historicalTrades = ['https://dapi.binance.com/','GET', '/dapi/v1/historicalTrades', False]  # 查询历史成交 (MARKET_DATA)
-    get_aggTrades = ['https://dapi.binance.com/','GET', '/dapi/v1/aggTrades', False]  # 近期成交(归集)
-    get_premiumIndex = ['https://dapi.binance.com/','GET', '/dapi/v1/premiumIndex', False]  # 最新现货指数价格和Mark Price
-    get_fundingRate = ['https://dapi.binance.com/','GET', '/dapi/v1/fundingRate', False]  # 查询永续合约资金费率历史
-    get_klines = ['https://dapi.binance.com/','GET', '/dapi/v1/klines', False]  # K线数据
-    get_continuousKlines = ['https://dapi.binance.com/','GET', '/dapi/v1/continuousKlines', False]  # 连续合约K线数据
-    get_indexPriceKlines = ['https://dapi.binance.com/','GET', '/dapi/v1/indexPriceKlines', False]  # 价格指数K线数据
-    get_markPriceKlines = ['https://dapi.binance.com/','GET', '/dapi/v1/markPriceKlines', False]  # 标记价格K线数据
-    get_ticker_24hr = ['https://dapi.binance.com/','GET', '/dapi/v1/ticker/24hr', False]  # 24hr价格变动情况
-    get_ticker_price = ['https://dapi.binance.com/','GET', '/dapi/v1/ticker/price', False]  # 最新价格
-    get_ticker_bookTicker = ['https://dapi.binance.com/','GET', '/dapi/v1/ticker/bookTicker', False]  # 当前最优挂单
-    get_openInterest = ['https://dapi.binance.com/','GET', '/dapi/v1/openInterest', False]  # 获取未平仓合约数
-    get_openInterestHist = ['https://dapi.binance.com/','GET', '/futures/data/openInterestHist', False]  # 合约持仓量
-    get_topLongShortAccountRatio = ['https://dapi.binance.com/','GET', '/futures/data/topLongShortAccountRatio', False]  # 大户账户数多空比
-    get_topLongShortPositionRatio = ['https://dapi.binance.com/','GET', '/futures/data/topLongShortPositionRatio', False]  # 大户持仓量多空比
-    get_globalLongShortAccountRatio = ['https://dapi.binance.com/','GET', '/futures/data/globalLongShortAccountRatio', False]  # 多空持仓人数比
-    get_takerBuySellVol = ['https://dapi.binance.com/','GET', '/futures/data/takerBuySellVol', False]  # 合约主动买卖量
-    get_basis = ['https://dapi.binance.com/','GET', '/futures/data/basis', False]  # 基差
+    get_ping = ['https://dapi.binance.com','GET', '/dapi/v1/ping', False]  # 测试服务器连通性 PING
+    get_time = ['https://dapi.binance.com','GET', '/dapi/v1/time', False]  # 获取服务器时间
+    get_exchangeInfo = ['https://dapi.binance.com','GET', '/dapi/v1/exchangeInfo', False]  # 获取交易规则和交易对
+    get_depth = ['https://dapi.binance.com','GET', '/dapi/v1/depth', False]  # 深度信息
+    get_trades = ['https://dapi.binance.com','GET', '/dapi/v1/trades', False]  # 近期成交
+    get_historicalTrades = ['https://dapi.binance.com','GET', '/dapi/v1/historicalTrades', False]  # 查询历史成交 (MARKET_DATA)
+    get_aggTrades = ['https://dapi.binance.com','GET', '/dapi/v1/aggTrades', False]  # 近期成交(归集)
+    get_premiumIndex = ['https://dapi.binance.com','GET', '/dapi/v1/premiumIndex', False]  # 最新现货指数价格和Mark Price
+    get_fundingRate = ['https://dapi.binance.com','GET', '/dapi/v1/fundingRate', False]  # 查询永续合约资金费率历史
+    get_klines = ['https://dapi.binance.com','GET', '/dapi/v1/klines', False]  # K线数据
+    get_continuousKlines = ['https://dapi.binance.com','GET', '/dapi/v1/continuousKlines', False]  # 连续合约K线数据
+    get_indexPriceKlines = ['https://dapi.binance.com','GET', '/dapi/v1/indexPriceKlines', False]  # 价格指数K线数据
+    get_markPriceKlines = ['https://dapi.binance.com','GET', '/dapi/v1/markPriceKlines', False]  # 标记价格K线数据
+    get_ticker_24hr = ['https://dapi.binance.com','GET', '/dapi/v1/ticker/24hr', False]  # 24hr价格变动情况
+    get_ticker_price = ['https://dapi.binance.com','GET', '/dapi/v1/ticker/price', False]  # 最新价格
+    get_ticker_bookTicker = ['https://dapi.binance.com','GET', '/dapi/v1/ticker/bookTicker', False]  # 当前最优挂单
+    get_openInterest = ['https://dapi.binance.com','GET', '/dapi/v1/openInterest', False]  # 获取未平仓合约数
+    get_openInterestHist = ['https://dapi.binance.com','GET', '/futures/data/openInterestHist', False]  # 合约持仓量
+    get_topLongShortAccountRatio = ['https://dapi.binance.com','GET', '/futures/data/topLongShortAccountRatio', False]  # 大户账户数多空比
+    get_topLongShortPositionRatio = ['https://dapi.binance.com','GET', '/futures/data/topLongShortPositionRatio', False]  # 大户持仓量多空比
+    get_globalLongShortAccountRatio = ['https://dapi.binance.com','GET', '/futures/data/globalLongShortAccountRatio', False]  # 多空持仓人数比
+    get_takerBuySellVol = ['https://dapi.binance.com','GET', '/futures/data/takerBuySellVol', False]  # 合约主动买卖量
+    get_basis = ['https://dapi.binance.com','GET', '/futures/data/basis', False]  # 基差
 
 
 class CMMarket(Client):

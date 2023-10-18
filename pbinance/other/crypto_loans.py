@@ -5,18 +5,18 @@ from typing import Union
 
 # 质押借币
 class _CryptoLoansEndpoints():
-    get_income = ['https://api.binance.com/','GET', '/sapi/v1/loan/income', True]  # 获取质押借币资金流水 (USER_DATA)
-    set_borrow = ['https://api.binance.com/','POST', '/sapi/v1/loan/borrow', False]  # 借币 - 质押借币借贷 (TRADE)
-    get_borrow_history = ['https://api.binance.com/','GET', '/sapi/v1/loan/borrow/history', False]  # 借币 - 查询质押借币历史记录 (USER_DATA)
-    get_ongoing_orders = ['https://api.binance.com/','GET', '/sapi/v1/loan/ongoing/orders', False]  # 借币 - 查询借款中订单列表 (USER_DATA)
-    set_repay = ['https://api.binance.com/','POST', '/sapi/v1/loan/repay', False]  # 还款 - 质押借币还款 (TRADE)
-    get_repay_history = ['https://api.binance.com/','GET', '/sapi/v1/loan/repay/history', False]  # 还款 - 查询还款记录历史 (USER_DATA)
-    set_adjust_ltv = ['https://api.binance.com/','POST', '/sapi/v1/loan/adjust/ltv', False]  # 调整质押率 - 质押借币调整质押率 (TRADE)
-    get_ltv_adjustment_history = ['https://api.binance.com/','GET', '/sapi/v1/loan/ltv/adjustment/history', False]  # 调整质押率 - 查询质押率调整历史 (USER_DATA)
-    get_loanable_data = ['https://api.binance.com/','GET', '/sapi/v1/loan/loanable/data', False]  # 查询可借币种数据 (USER_DATA)
-    get_collateral_data = ['https://api.binance.com/','GET', '/sapi/v1/loan/collateral/data', False]  # 查询抵押币种数据 (USER_DATA)
-    get_repay_collateral_rate = ['https://api.binance.com/','GET', '/sapi/v1/loan/repay/collateral/rate', False]  # 查询抵押币种还款汇率 (USER_DATA)
-    set_customize_margin_call = ['https://api.binance.com/','POST', '/sapi/v1/loan/customize/margin_call', False]  # 质押借币自定义补仓质押率 (TRADE)
+    get_income = ['https://api.binance.com','GET', '/sapi/v1/loan/income', True]  # 获取质押借币资金流水 (USER_DATA)
+    set_borrow = ['https://api.binance.com','POST', '/sapi/v1/loan/borrow', False]  # 借币 - 质押借币借贷 (TRADE)
+    get_borrow_history = ['https://api.binance.com','GET', '/sapi/v1/loan/borrow/history', False]  # 借币 - 查询质押借币历史记录 (USER_DATA)
+    get_ongoing_orders = ['https://api.binance.com','GET', '/sapi/v1/loan/ongoing/orders', False]  # 借币 - 查询借款中订单列表 (USER_DATA)
+    set_repay = ['https://api.binance.com','POST', '/sapi/v1/loan/repay', False]  # 还款 - 质押借币还款 (TRADE)
+    get_repay_history = ['https://api.binance.com','GET', '/sapi/v1/loan/repay/history', False]  # 还款 - 查询还款记录历史 (USER_DATA)
+    set_adjust_ltv = ['https://api.binance.com','POST', '/sapi/v1/loan/adjust/ltv', False]  # 调整质押率 - 质押借币调整质押率 (TRADE)
+    get_ltv_adjustment_history = ['https://api.binance.com','GET', '/sapi/v1/loan/ltv/adjustment/history', False]  # 调整质押率 - 查询质押率调整历史 (USER_DATA)
+    get_loanable_data = ['https://api.binance.com','GET', '/sapi/v1/loan/loanable/data', False]  # 查询可借币种数据 (USER_DATA)
+    get_collateral_data = ['https://api.binance.com','GET', '/sapi/v1/loan/collateral/data', False]  # 查询抵押币种数据 (USER_DATA)
+    get_repay_collateral_rate = ['https://api.binance.com','GET', '/sapi/v1/loan/repay/collateral/rate', False]  # 查询抵押币种还款汇率 (USER_DATA)
+    set_customize_margin_call = ['https://api.binance.com','POST', '/sapi/v1/loan/customize/margin_call', False]  # 质押借币自定义补仓质押率 (TRADE)
 
 
 class CryptoLoans(Client):

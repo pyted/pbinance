@@ -5,20 +5,20 @@ from typing import Union
 
 # 账户与交易
 class _EOAccountTradeEndpoints():
-    get_account = ['https://eapi.binance.com/','GET', '/eapi/v1/account', True]  # 账户信息 (TRADE)
-    set_transfer = ['https://eapi.binance.com/','POST', '/eapi/v1/transfer', True]  # 资金划转 (TRADE)
-    set_order = ['https://eapi.binance.com/','POST', '/eapi/v1/order', True]  # 下单 (TRADE)
-    set_batchOrders = ['https://eapi.binance.com/','POST', '/eapi/v1/batchOrders', True]  # 批量下单 (TRADE)
-    cancel_order = ['https://eapi.binance.com/','DELETE', '/eapi/v1/order', True]  # 撤销订单 (TRADE)
-    cancel_batchOrders = ['https://eapi.binance.com/','DELETE', '/eapi/v1/batchOrders', True]  # 批量撤销订单 (TRADE)
-    cancel_allOpenOrders = ['https://eapi.binance.com/','DELETE', '/eapi/v1/allOpenOrders', True]  # 撤销单交易对全部订单 (TRADE)
-    cancel_allOpenOrdersByUnderlying = ['https://eapi.binance.com/','DELETE', '/eapi/v1/allOpenOrdersByUnderlying', True]  # 撤销特定标的全部订单 (TRADE)
-    get_openOrders = ['https://eapi.binance.com/','GET', '/eapi/v1/openOrders', True]  # 查询当前挂单 (USER_DATA)
-    get_historyOrders = ['https://eapi.binance.com/','GET', '/eapi/v1/historyOrders', True]  # 查询历史订单 (USER_DATA)
-    get_position = ['https://eapi.binance.com/','GET', '/eapi/v1/position', True]  # 仓位信息 (USER_DATA)
-    get_userTrades = ['https://eapi.binance.com/','GET', '/eapi/v1/userTrades', True]  # 账户成交历史 (USER_DATA)
-    get_exerciseRecord = ['https://eapi.binance.com/','GET', '/eapi/v1/exerciseRecord', True]  # 用户行权历史(USER_DATA)
-    get_bill = ['https://eapi.binance.com/','GET', '/eapi/v1/bill', True]  # 获取账户资金流水(USER_DATA)
+    get_account = ['https://eapi.binance.com','GET', '/eapi/v1/account', True]  # 账户信息 (TRADE)
+    set_transfer = ['https://eapi.binance.com','POST', '/eapi/v1/transfer', True]  # 资金划转 (TRADE)
+    set_order = ['https://eapi.binance.com','POST', '/eapi/v1/order', True]  # 下单 (TRADE)
+    set_batchOrders = ['https://eapi.binance.com','POST', '/eapi/v1/batchOrders', True]  # 批量下单 (TRADE)
+    cancel_order = ['https://eapi.binance.com','DELETE', '/eapi/v1/order', True]  # 撤销订单 (TRADE)
+    cancel_batchOrders = ['https://eapi.binance.com','DELETE', '/eapi/v1/batchOrders', True]  # 批量撤销订单 (TRADE)
+    cancel_allOpenOrders = ['https://eapi.binance.com','DELETE', '/eapi/v1/allOpenOrders', True]  # 撤销单交易对全部订单 (TRADE)
+    cancel_allOpenOrdersByUnderlying = ['https://eapi.binance.com','DELETE', '/eapi/v1/allOpenOrdersByUnderlying', True]  # 撤销特定标的全部订单 (TRADE)
+    get_openOrders = ['https://eapi.binance.com','GET', '/eapi/v1/openOrders', True]  # 查询当前挂单 (USER_DATA)
+    get_historyOrders = ['https://eapi.binance.com','GET', '/eapi/v1/historyOrders', True]  # 查询历史订单 (USER_DATA)
+    get_position = ['https://eapi.binance.com','GET', '/eapi/v1/position', True]  # 仓位信息 (USER_DATA)
+    get_userTrades = ['https://eapi.binance.com','GET', '/eapi/v1/userTrades', True]  # 账户成交历史 (USER_DATA)
+    get_exerciseRecord = ['https://eapi.binance.com','GET', '/eapi/v1/exerciseRecord', True]  # 用户行权历史(USER_DATA)
+    get_bill = ['https://eapi.binance.com','GET', '/eapi/v1/bill', True]  # 获取账户资金流水(USER_DATA)
 
 
 class EOAccountTrade(Client):
