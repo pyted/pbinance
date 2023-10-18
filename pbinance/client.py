@@ -1,5 +1,7 @@
 import hmac
 import hashlib
+import json
+
 import requests
 import urllib.parse as up
 import time
@@ -46,7 +48,11 @@ class Client():
         params_no_empty = {}
         for key, v in kwargs.items():
             if not (v == '' or v == None):
-                params_no_empty[key] = v
+                if type(v) == list:
+                    params_no_empty[key] = json.dumps(v).replace(" ", "")
+                else:
+                    params_no_empty[key] = v
+
         if sign:
             params_no_empty["timestamp"] = int(time.time() * 1000)
             query_string = up.urlencode(params_no_empty, True).replace("%40", "@")
@@ -57,7 +63,6 @@ class Client():
         else:
             proxy_api_url = proxy_host_map[api_url].format(host=self.proxy_host)
             url = proxy_api_url + path
-
         response = getattr(self.session, method.lower())(
             url=url,
             params=up.urlencode(params_no_empty, True).replace("%40", "@")
