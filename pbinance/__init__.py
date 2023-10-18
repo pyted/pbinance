@@ -20,13 +20,13 @@ eo = european_options
 
 
 class Binance():
-    def __init__(self, key='', secret=''):
-        self.spot = SPOT(key=key, secret=secret)
-        self.cm = CM(key=key, secret=secret)
-        self.um = UM(key=key, secret=secret)
-        self.eo = EO(key=key, secret=secret)
-        self.margin = Margin(key=key, secret=secret)
-        self.other = Other(key=key, secret=secret)
+    def __init__(self, key='', secret='', proxies={}, proxy_host: str = None):
+        self.spot = SPOT(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
+        self.cm = CM(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
+        self.um = UM(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
+        self.eo = EO(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
+        self.margin = Margin(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
+        self.other = Other(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
 
 
-__version__ = '1.0.6'
+__version__ = '1.0.8'

@@ -14,8 +14,8 @@ PortfolioMargin = SPOTPortfolioMargin
 
 
 class SPOT():
-    def __init__(self, key='', secret=''):
-        self.accountTrade = AccountTrade(key=key, secret=secret)
-        self.market = Market(key=key, secret=secret)
-        self.portfolioMargin = PortfolioMargin(key=key, secret=secret)
-        self.wallet = Wallet(key=key, secret=secret)
+    def __init__(self, key='', secret='', proxies={}, proxy_host: str = None):
+        self.accountTrade = AccountTrade(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
+        self.market = Market(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
+        self.portfolioMargin = PortfolioMargin(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
+        self.wallet = Wallet(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)

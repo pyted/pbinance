@@ -11,8 +11,9 @@ Market = EOMarket
 AccountTrade = EOAccountTrade
 MarketMaker = EOMarketMaker
 
+
 class EO():
-    def __init__(self, key='', secret=''):
-        self.market = Market(key=key, secret=secret)
-        self.accountTrade = AccountTrade(key=key, secret=secret)
-        self.marketMaker = MarketMaker(key=key, secret=secret)
+    def __init__(self, key='', secret='', proxies={}, proxy_host: str = None):
+        self.market = Market(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
+        self.accountTrade = AccountTrade(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
+        self.marketMaker = MarketMaker(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)

@@ -9,13 +9,13 @@ AccountTrade = MarginAccountTrade
 
 
 class Margin():
-    def __init__(self, key='', secret=''):
+    def __init__(self, key='', secret='', proxies={}, proxy_host: str = None):
         from pbinance.spot.spot_market import SPOTMarket as Market
         from pbinance.spot.spot_portfolio_margin import SPOTPortfolioMargin as PortfolioMargin
         from pbinance.spot.wallet import Wallet
 
-        self.accountTrade = AccountTrade(key=key, secret=secret)  # 币币杠杆账户与交易
+        self.accountTrade = AccountTrade(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)  # 币币杠杆账户与交易
         # *******************************************************
-        self.market = Market(key=key, secret=secret)  # 使用币币交易行情信息
-        self.portfolioMargin = PortfolioMargin(key=key, secret=secret)  # 使用币币交易的统一账户
-        self.wallet = Wallet(key=key, secret=secret)  # 钱包
+        self.market = Market(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)  # 使用币币交易行情信息
+        self.portfolioMargin = PortfolioMargin(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)  # 使用币币交易的统一账户
+        self.wallet = Wallet(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)  # 钱包
