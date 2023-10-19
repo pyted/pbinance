@@ -12,14 +12,17 @@ def request_retry_wrapper(retry_num=50, retry_delay=0.1):
     def wrapper1(func):
         def wrapper2(*args, **kwargs):
             for i in range(retry_num - 1):
-                result = func(*args, **kwargs)
-                if result['code'] == 200:
-                    return result
-                elif result['code'] in [-1001, -1003, -1004, -1007, -1008, -1016]:
+                try:
+                    result = func(*args, **kwargs)
+                    if result['code'] == 200:
+                        return result
+                    elif result['code'] in [-1001, -1003, -1004, -1007, -1008, -1016]:
+                        time.sleep(retry_delay)
+                        continue
+                    else:
+                        return result
+                except requests.exceptions.ConnectionError:
                     time.sleep(retry_delay)
-                    continue
-                else:
-                    return result
             result = func(*args, **kwargs)
             return result
 
