@@ -29,4 +29,4 @@ class Binance():
         self.other = Other(key=key, secret=secret, proxies=proxies, proxy_host=proxy_host)
 
 
-__version__ = '1.0.9'
+__version__ = '1.0.10'

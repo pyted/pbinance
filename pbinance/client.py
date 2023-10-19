@@ -47,7 +47,7 @@ class Client():
     def send_request(self, api_url, method, path, sign=True, **kwargs):
         params_no_empty = {}
         for key, v in kwargs.items():
-            if not (v == '' or v == None):
+            if not (v == '' or v == None or v == []):
                 if type(v) == list:
                     params_no_empty[key] = json.dumps(v).replace(" ", "")
                 else:
