@@ -1,3 +1,9 @@
+-------------------------------------------------------
+# Pbinance已停止维护，功能已整合在Binance_interface中：
+
+GITHUB：https://github.com/pyted/binance_interface
+-------------------------------------------------------
+
 # pbinance 说明文档 v1.0.11
 
 ## 1 pbinance设计目的
